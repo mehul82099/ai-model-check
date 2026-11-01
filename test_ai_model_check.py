@@ -195,6 +195,30 @@ class DatasetTests(unittest.TestCase):
             self.assertIn(m["provider"],
                           ("openai", "anthropic", "google"))
 
+    def test_anthropic_replacements_current(self):
+        """Spot-checks verified against Anthropic's deprecation page on
+        2026-11-01: retired Sonnet models recommend claude-sonnet-5-5."""
+        by_id = {m["id"]: m for m in self.data["models"]}
+        for mid in ("claude-3-sonnet-20240229", "claude-3-5-sonnet-20240620",
+                    "claude-3-5-sonnet-20241022", "claude-3-7-sonnet-20250219",
+                    "claude-sonnet-4-20250514"):
+            self.assertEqual(by_id[mid]["replacement"], "claude-sonnet-5-5",
+                             mid)
+
+    def test_sonnet_4_5_row_present(self):
+        """Deprecated 2026-09-30, retires 2026-11-30, per Anthropic's
+        deprecation page as fetched 2026-11-01."""
+        by_id = {m["id"]: m for m in self.data["models"]}
+        row = by_id["claude-sonnet-4-5-20250929"]
+        self.assertEqual(row["shutdown"], "2026-11-30")
+        self.assertEqual(row["announced"], "2026-09-30")
+        self.assertEqual(row["replacement"], "claude-sonnet-5-5")
+
+    def test_mythos_preview_announced(self):
+        by_id = {m["id"]: m for m in self.data["models"]}
+        self.assertEqual(by_id["claude-mythos-preview"]["announced"],
+                         "2026-06-09")
+
 
 class CLITests(unittest.TestCase):
     def setUp(self):

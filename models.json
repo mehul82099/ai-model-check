@@ -1,5 +1,5 @@
 {
-  "verified_at": "2026-10-31",
+  "verified_at": "2026-11-01",
   "sources": [
     {
       "provider": "openai",
@@ -75,7 +75,7 @@
       "id": "claude-3-5-sonnet-20240620",
       "provider": "anthropic",
       "shutdown": "2025-10-28",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
       "announced": "2025-08-13"
     },
@@ -83,7 +83,7 @@
       "id": "claude-3-5-sonnet-20241022",
       "provider": "anthropic",
       "shutdown": "2025-10-28",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
       "announced": "2025-08-13"
     },
@@ -91,7 +91,7 @@
       "id": "claude-3-7-sonnet-20250219",
       "provider": "anthropic",
       "shutdown": "2026-02-19",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
       "announced": "2025-10-28"
     },
@@ -115,7 +115,7 @@
       "id": "claude-3-sonnet-20240229",
       "provider": "anthropic",
       "shutdown": "2025-07-21",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
       "announced": "2025-01-21"
     },
@@ -149,7 +149,8 @@
       "shutdown": null,
       "replacement": "claude-mythos-5",
       "source": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
-      "status": "deprecated"
+      "status": "deprecated",
+      "announced": "2026-06-09"
     },
     {
       "id": "claude-opus-4-1-20250805",
@@ -171,9 +172,17 @@
       "id": "claude-sonnet-4-20250514",
       "provider": "anthropic",
       "shutdown": "2026-06-15",
-      "replacement": "claude-sonnet-4-6",
+      "replacement": "claude-sonnet-5-5",
       "source": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
       "announced": "2026-04-14"
+    },
+    {
+      "id": "claude-sonnet-4-5-20250929",
+      "provider": "anthropic",
+      "shutdown": "2026-11-30",
+      "replacement": "claude-sonnet-5-5",
+      "source": "https://docs.anthropic.com/en/docs/about-claude/model-deprecations",
+      "announced": "2026-09-30"
     },
     {
       "id": "antigravity-preview-05-2026",

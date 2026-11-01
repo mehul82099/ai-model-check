@@ -13,7 +13,7 @@ Google, and tells you the shutdown date and the replacement the provider
 recommends:
 
 ```
-app.py:3 [error] model-retired: claude-3-5-sonnet-20241022 (anthropic) was shut down on 2025-10-28; requests fail. Recommended replacement: claude-sonnet-4-6 (docs.anthropic.com).
+app.py:3 [error] model-retired: claude-3-5-sonnet-20241022 (anthropic) was shut down on 2025-10-28; requests fail. Recommended replacement: claude-sonnet-5-5 (docs.anthropic.com).
 config.py:9 [warning] model-deprecated: gpt-4o (openai) is deprecated and shuts down on 2027-01-14. Recommended replacement: gpt-6-luna (platform.openai.com).
 ai-model-check: 1 error(s), 1 warning(s)
 ```
@@ -40,16 +40,18 @@ python3 ai_model_check.py --format json --fail-on-warning src/
 
 ## The data
 
-`models.json` holds 245 model entries transcribed from the providers'
-own deprecation pages, all fetched on **2026-10-31**:
+`models.json` holds 246 model entries transcribed from the providers'
+own deprecation pages, last fetched on **2026-11-01**:
 
 - [OpenAI deprecations](https://platform.openai.com/docs/deprecations) -
   171 entries, including the October 23, 2026 shutdown of
   `gpt-3.5-turbo`, `gpt-4`, `gpt-4-turbo`, `o1`, `o3-mini`, `o4-mini`
   and the January 14, 2027 shutdown announced for the GPT-4o/4.1 series.
 - [Anthropic model deprecations](https://docs.anthropic.com/en/docs/about-claude/model-deprecations) -
-  20 entries: every model Anthropic lists as Retired, plus
-  `claude-mythos-preview` (deprecated, no date announced).
+  21 entries: every model Anthropic lists as Retired, plus
+  `claude-sonnet-4-5-20250929` (deprecated September 30, 2026,
+  retires November 30, 2026) and `claude-mythos-preview` (deprecated
+  June 9, 2026; retirement date to be announced).
 - [Gemini deprecations](https://ai.google.dev/gemini-api/docs/deprecations) -
   54 entries across Gemini, Imagen, Veo, embedding, Live and robotics
   models.
